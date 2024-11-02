@@ -19,8 +19,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">MACOST</a> 
-               
+                <a class="navbar-brand" href="#page-top">MACOST</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -32,8 +31,6 @@
                        
                         <li class="nav-item"><a class="nav-link" href="#signup">¡REGISTRATE! </a></li>
                         <li class="nav-item"><a class="nav-link" href="#login">¡INICIA SESION! </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about2">¡CONOCE NUESTROS PLANES!</a></li>
- 
                         
                     </ul>
                 </div>
@@ -140,7 +137,7 @@
                                     <div class="fw-bolder">tu registro fue exitoso!</div>
                                     conoce nuestros planes anuales
                                     <br />
-                                   
+                                    <a href="file:///C:/xampp/htdocs/macost/pagina%20precios/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages/index.html">file:///C:/xampp/htdocs/macost/pagina%20precios/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages/index.html#</a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -250,261 +247,6 @@
 </div>
 </div>
 </section>
-
-
-
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Conoce nuestros planes anuales - MACOST</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-        .cart-dropdown {
-            position: absolute;
-            right: 15px;
-            top: 50px;
-            display: none;
-            background-color: rgb(7, 7, 7);
-            border: 1px solid #141414;
-            padding: 10px;
-            z-index: 1000;
-            width: 300px;
-        }
-        .cart-dropdown.active {
-            display: block;
-        }
-        .cart-item {
-            margin-bottom: 10px;
-        }
-        .total {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    </nav>
-    <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">CONOCE NUESTROS PLANES ANULES</h1>
-
-                                          <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="button" onclick="toggleCart()">
-                        <i class="bi-cart-fill me-1"></i>
-                        TU CARRITO
-                        <span class="badge bg-dark text-white ms-1 rounded-pill cart-count" id="cart-count">0</span>
-                    </button>
-                    <div class="cart-dropdown" id="cart-dropdown">
-                        <div id="cart-items"></div>
-                        <div class="total">Total: $<span id="cart-total">0</span></div>
-                        <button class="btn btn-primary mt-2" onclick="checkout()">Pagar</button>
-                        <button class="btn btn-secondary mt-2" onclick="toggleCart()">Cerrar</button>
-                            <!-- Footer-->
-    <footer class="py-5 bg-dark"></footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <script>
-        let cartCount = 0;
-        let cartTotal = 0;
-        const cartItems = [];
-
-        function addToCart(productName, productPrice) {
-            cartCount++;
-            cartTotal += productPrice;
-            cartItems.push({ name: productName, price: productPrice });
-            updateCartDisplay();
-            alert(productName + ' agregado al carrito por $' + productPrice);
-        }
-
-        function updateCartDisplay() {
-            document.getElementById('cart-count').textContent = cartCount;
-            document.getElementById('cart-total').textContent = cartTotal;
-            const cartItemsContainer = document.getElementById('cart-items');
-            cartItemsContainer.innerHTML = '';
-            cartItems.forEach(item => {
-                const itemDiv = document.createElement('div');
-                itemDiv.classList.add('cart-item');
-                itemDiv.textContent = `${item.name} - $${item.price}`;
-                cartItemsContainer.appendChild(itemDiv);
-            });
-        }
-
-        function toggleCart() {
-            const dropdown = document.getElementById('cart-dropdown');
-            dropdown.classList.toggle('active');
-        }
-
-        function checkout() {
-            alert('Total a pagar: $' + cartTotal);
-            // Aquí podrías redirigir a una página de pago o procesar el pago
-            cartCount = 0;
-            cartTotal = 0;
-            cartItems.length = 0; // Vaciar el carrito
-            updateCartDisplay(); // Actualizar visualmente el carrito
-            toggleCart(); // Cerrar el carrito
-        }
-    </script>
-</body>
-</html>
-                        
-                    </div>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-   
-                
-                
-                                            
-                                           
-                                                
-                                               
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
-             
-            </div>
-        </div>
-           <!-- About2-->
-           <section class="about-section text-center" id="about2">
-       
-    </div>
-</section>
-    <!-- Section-->
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <!-- Product 1 -->
-                <div class="col mb-5">
-                    <div class="card h-100">
-                  
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">PLAN ECO</h5>
-                                Almacenamiento de Datos: Hasta 50GB
-                                <br> Soporte Técnico: Soporte básico
-                                Almacenamiento de Datos: Hasta 50GB Soporte Técnico: Soporte básico durante horario laboral (9 AM - 5 PM) Seguridad de Datos: Protección estándar contra amenazas y accesos no autorizados Actualizaciones: Acceso a actualizaciones menores
-                                   <!-- Product reviews-->
-                                   <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    
-                                </div>
-                                <br> $50.000
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('PLAN ECO', 50000)">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">PLAN PREMIUM</h5>
-                                Almacenamiento de Datos: Hasta 5 TB
-                                <br> Soporte Técnico: Soporte avanzado 24/7
-                                Servicios incluidos: Almacenamiento de Datos: Hasta 20 TB Soporte Técnico: Soporte dedicado 24/7 con tiempos de respuesta ultra rápidos Seguridad de Datos: Seguridad de nivel empresarial con análisis de vulnerabilidades y respuesta ante incidentes
-                                
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        
-                                    </div>
-                                <br> $80.000
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('PLAN PREMIUM', 80000)">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="col mb-5">
-                    <div class="card h-100">
-                       
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">PLAN PROFESIONAL</h5>
-                                Almacenamiento de Datos: Hasta 20 TB
-                                <br> Soporte Técnico: Soporte dedicado 24/7
-                                Servicios incluidos: Almacenamiento de Datos: Hasta 5 TB Soporte Técnico: Soporte avanzado 24/7 con tiempos de respuesta prioritarios Seguridad de Datos: Seguridad avanzada con cifrado de datos y monitorización constante
-                                
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                <br> $200.000
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <button class="btn btn-outline-dark mt-auto" onclick="addToCart('PLAN PROFESIONAL', 200000)">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </section>
-
-
 
 
 
